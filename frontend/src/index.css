@@ -1,0 +1,680 @@
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+    
+    
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    overflow-wrap: normal;
+}
+body{
+    overflow-x: hidden;
+    
+}
+
+.heading_bttns_row{
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bttn_and_text_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+   
+
+  }
+  .line {
+    height: 2px;
+    background-color: lightgray;
+    width: 100%;
+  }
+
+  .active_line{
+    background-color:rgba(135, 206, 235) ;
+  }
+
+.form_bttn {
+    padding: 1.8rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    font-weight: 800;
+    border: 2px solid lightgrey;
+    color: grey;
+    background-color: transparent; 
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+
+  }
+  
+  /* Hover effect */
+  .form_bttn:hover {
+    background-color: lightgrey; 
+    color: black; 
+  }
+  
+
+.active_bttn{
+    border-color: rgba(135, 206, 235);
+    color: rgba(135, 206, 235);
+}
+
+
+
+.bttn_below_text{
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+
+/* css for part information page  */
+
+
+.text_and_toggle_bttn{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start ;
+  align-items: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: grey;
+  padding-left: 1rem;
+  
+
+}
+
+/* Style for the toggle button */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 2.4rem;
+  margin-left: 1rem;
+}
+
+/* Hide the default checkbox */
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style the slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red; /* Red color when unchecked */
+  transition: .4s;
+  border-radius: 2.4rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.8rem;
+  width: 1.8rem;
+  left: 0.4rem;
+  bottom: 0.35rem;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: green; /* Green color when checked */
+}
+
+input:checked + .slider:before {
+  transform: translateX(2.4rem);
+}
+
+/* Styling for "Yes" and "No" labels */
+.label-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: white;
+  padding: .4rem .8rem;
+  transition: transform .3s;
+}
+
+.yes {
+  left: 1.5rem;
+  transform: translate(-50%, -50%);
+}
+
+.no {
+  right: 1.5rem;
+  transform: translate(50%, -50%);
+}
+
+/* Hide labels when toggled */
+input:checked + .slider .yes {
+  transform: translate(-150%, -50%);
+}
+
+input:checked + .slider .no {
+  transform: translate(50%, -50%);
+}
+
+
+.outer_div_for_booking_party_info{
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+
+}
+
+.heading{
+  font-size: 2.1rem;
+  font-family: sans-serif;
+  font-weight: 400;
+  padding-bottom:  1rem;
+}
+.sub_heading{
+  display: flex;
+  font-size: 1.8rem;
+  padding-left: 2rem;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.heading_rows{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.rows{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.two_inputfield_rows_list{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items:center;
+}
+.rows_type_2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dot_dot_dot{
+  font-size: 5rem;
+}
+
+.plus_sign{
+  font-size: 3rem;
+
+}
+
+
+
+
+
+/* css for text inputfield */
+
+/* Style for the form group */
+.form-group {
+  margin-bottom: 1.5rem;
+  margin: 1.5rem;
+  margin-right: 2rem;
+}
+
+/* Style for the label */
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Style for the input field */
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 1.3rem;
+  margin-right: 3rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  font-size: 1.8rem;
+  box-sizing: border-box;
+}
+
+.label{
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: grey;
+}
+
+/* css for opposite_party_info */
+
+.opposite_party_info{
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+
+/* css for ADDITION PARTIES */
+
+.OUTER_OF_ADDITION_PARTIES{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.addition_parties_bttn{
+  color: rgba(135, 206, 235);
+  border: 0.3rem rgba(135, 206, 235) solid;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+
+
+/* css for addition_bttn */
+
+.addition_bttn_div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+
+.addition_bttn{
+  background-color: black;
+  color: white;
+  border: 1rem,black solid;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+
+/* css for logistics */
+
+.outer_div_for_logistics{
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+
+}
+
+.row_of_file_upload{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start ;
+  
+  font-family: sans-serif;
+  color: grey;
+  padding-left: 1rem;
+  padding: 2rem;
+
+}
+.text_above_file_upload{
+  padding-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+
+.custom-file-upload {
+  display: inline-block;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.custom-file-upload span {
+  display: inline-block;
+  background-color:white;
+  color: black;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding-right: 2rem;
+}
+
+.custom-file-upload input[type='file'] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
+
+.calendar-input{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.calendar-input label{
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  
+}
+
+.logistics_rows{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+#calendar{
+  width: 100%;
+  padding: 1.3rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  font-size: 1.8rem;
+  box-sizing: border-box;
+
+}
+.calender_label{
+  color: grey;
+  font-family: sans-serif;
+}
+.sub_rows{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+/* css for tribunal_secretary_div */
+
+.tribunal_secretary_div{
+  margin-top: 5rem;
+
+
+}
+
+.tribunal_secretary_input_div{
+  margin-top: 2rem;
+}
+
+.initially_set_hidden{
+  display: none;
+}
+
+.virtual_logistics_outer_div{
+  margin-top: 5rem;
+}
+
+
+.virtual_logistics_heading{
+  font-size: 2.8rem;
+
+  font-family: sans-serif;
+}
+.virtual_text_and_toggle_bttn{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start ;
+  align-items: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: grey;
+  padding-left: 1rem;
+  padding-top: 2rem;
+
+}
+
+.asking_for_vcm{
+  font-size: 1.8rem;
+  padding-left: 1.5rem;
+  
+  
+}
+
+.selecting_partcula_vcm_div{
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: row;
+  justify-content:flex-start ;
+  align-items: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: grey;
+  padding-left: 1rem;
+  padding-top: 2rem;
+
+}
+.second_row_vcm_div{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start ;
+  align-items: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: grey;
+  padding-left: 1rem;
+  padding-top: 2rem;
+
+}
+
+.virtual_form_div{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start ;
+  align-items: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: grey;
+  padding-left: 1rem;
+  padding-top: 2rem;
+  
+}
+.VD{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+.VD_HIDDEN_DIV{
+  display: none;
+}
+.recorded{
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: grey;
+  font-weight: bold;
+  margin-bottom: .05rem;
+}
+
+
+.tgglv{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* CSS FOR ADDITIONAL SERVICES  */
+
+.outer_div_for_AS{
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+}
+
+.AS_HEADING{
+  color: black;
+  font-size: 3rem;
+  font-family: sans-serif;
+
+}
+
+.AS_columns{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  padding-top: 2rem;
+
+}
+
+.AS_sub_heading{
+  font-size: 1.7rem;
+  color: grey;
+  font-family: sans-serif;
+  padding: 3rem;
+
+}
+
+.heading_and_toggle{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start ;
+  align-items: center;
+  font-family: sans-serif;
+  color: grey;
+  padding-top: 2rem;
+
+}
+
+
+
+.hidden_row_1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.textfield1{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 2rem;
+  align-items: center;
+}
+
+.list_lang{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.select_languages{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 2rem;
+}
+
+.interpreted_laguages{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 2rem;
+}
+
+
+@media(max-width:605px){
+  html{
+    font-size: 58%;
+    
+}
+}
+
+@media(max-width:550px){
+  html{
+    font-size: 56%;
+    
+}
+}
+
+@media(max-width:530px){
+  html{
+    font-size: 54%;
+    
+}
+}
+
+
+@media(max-width:510px){
+  html{
+    font-size: 52%;
+    
+}
+}
+
+@media(max-width:450px){
+  html{
+    font-size: 50%;
+    
+}
+}
+
+@media(max-width:400px){
+  html{
+    font-size: 47%;
+    
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
